@@ -1,0 +1,73 @@
+{% extends 'form/base.html' %}
+{% block title %} Contacto {% endblock title %}
+{% block content %}
+
+<!-- SUBHEADER -->
+    <section id="subheader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Contacto</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN PAGE -->
+    <section id="page" class="contact">
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2><span class="primary-text">Escribenos</span> tus solicitudes</h2>
+            <p>Usa este formulario para contactarnos</p>
+          <!-- 
+           <table>
+            {{ form.as_table}}
+          </table>-->
+
+            <form id="mi-formulario" action="" method="POST">
+              {% csrf_token %}
+               {{form.as_p}}
+
+            <!--   <div>
+                <label for="nombre">Nombre</label><br>-->
+               <!--  <input type="text" name="nombre" required placeholder="escriba su nombre">-->
+
+              <!-- {{form.name}}
+                <br> <label class="error" for="nombre"></label><br>
+              </div>
+               {{form.name.errors}}-->
+
+             <!--  <div>
+                <label for="apellido">Apellido</label><br>
+                {{form.name}}-->
+              <!--   <input type="text" name="apellido" required placeholder="escriba su apellido">-->
+              <!--   <br> <label class="error" for="apellido"></label><br> 
+              </div>
+                {{form.name.errors}}
+              <div>-->
+                 
+              <!--  <label for="email">Email</label><br>
+                {{form.email}}-->
+              <!--    <input type="text" name="email" required placeholder="nombre@dominio.cl">-->
+               <!--    <br> <label class="error" for="email"></label><br>
+              </div>
+              {{form.email.errors}}
+              <div>
+                <label for="mensaje">Mensaje</label><br>
+                {{form.content}}-->
+                <!--  <textarea name="mensaje" minlength="50" maxlength="500"  required placeholder="mínimo 50 caracteres y máximo 500"   ></textarea> -->
+               <!--   <br> <label class="error" for="mensaje"></label><br>
+              </div>
+               {{form.content.errors}} -->
+
+              <button type="submit" name="button">Enviar</button>
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+{% endblock content %}
